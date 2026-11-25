@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VG Wealth | Educação financeira para construir seu futuro</title>
+<meta name="description" content="VG Wealth: educação financeira e planejamento patrimonial de longo prazo para pessoas, famílias e empresários, com base no Centro-Oeste.">
+<meta property="og:title" content="VG Wealth | Educação financeira para construir seu futuro">
+<meta property="og:description" content="Planejamento patrimonial de longo prazo, construído em camadas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/lavoura.jpg">
+<link rel="icon" type="image/png" href="vg-wealth-icone.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink-900:#041c17;--ink-800:#062b23;--ink-700:#0a3f33;--ink-600:#0b5c48;
+  --surface-0:#ffffff;--surface-1:#f1f7f4;--surface-2:#e4efea;--surface-3:#d2e4dc;
+  --brand:#0d7a5f;--brand-soft:#149373;--brand-deep:#0a634d;--brand-wash:rgba(13,122,95,.09);
+  --accent:#e0633a;--accent-soft:#f08a66;--accent-deep:#a63f1e;--accent-wash:rgba(224,99,58,.16);
+  --mint:#9fe0c6;
+  --text-hi:#062b23;--text-body:rgba(6,43,35,.84);--text-mute:rgba(6,43,35,.7);--text-faint:rgba(6,43,35,.62);
+  --on-hi:#ffffff;--on-body:rgba(255,255,255,.9);--on-mute:rgba(255,255,255,.76);
+  --line-faint:rgba(6,43,35,.08);--line:rgba(6,43,35,.15);--line-strong:rgba(6,43,35,.28);
+  --on-line:rgba(255,255,255,.2);--on-line-strong:rgba(255,255,255,.38);
+  --glass:rgba(255,255,255,.12);--dock-bg:rgba(4,28,23,.9);--glass-strong:rgba(4,28,23,.46);--dot:rgba(255,255,255,.17);
+  --font:'Schibsted Grotesk',system-ui,sans-serif;
+  --text-xs:clamp(.76rem,.74rem + .1vw,.82rem);
+  --text-sm:clamp(.88rem,.86rem + .1vw,.94rem);
+  --text-base:clamp(1rem,.96rem + .2vw,1.1rem);
+  --text-lg:clamp(1.15rem,1.07rem + .35vw,1.35rem);
+  --text-xl:clamp(1.4rem,1.25rem + .7vw,1.85rem);
+  --text-2xl:clamp(1.8rem,1.45rem + 1.4vw,2.7rem);
+  --text-3xl:clamp(2.25rem,1.6rem + 2.8vw,4.2rem);
+  --text-hero:clamp(2.2rem,.9rem + 3.4vw,4.4rem);
+  --text-year:clamp(4rem,1rem + 10vw,11rem);
+  --text-giant:clamp(4.5rem,-1rem + 19vw,19rem);
+  --track-display:-.038em;--track-tight:-.018em;--track-caps:.14em;
+  --leading-display:1.02;--leading-tight:1.16;--leading-body:1.65;
+  --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:48px;--sp-8:64px;--sp-9:96px;
+  --section-y:clamp(80px,10vw,156px);--gutter:clamp(20px,5vw,64px);--wide:1280px;--measure:60ch;
+  --r-sm:8px;--r-md:16px;--r-lg:28px;--r-pill:999px;
+  --e-1:0 1px 2px rgba(4,28,23,.16);
+  --e-2:0 2px 4px rgba(4,28,23,.12),0 8px 18px rgba(4,28,23,.1);
+  --e-3:0 6px 12px rgba(4,28,23,.14),0 20px 40px rgba(4,28,23,.16);
+  --e-4:0 12px 24px rgba(4,28,23,.22),0 40px 80px rgba(4,28,23,.3);
+  --e-glow:0 10px 30px rgba(224,99,58,.36);
+  --e-inset:inset 0 1px 0 rgba(255,255,255,.18);
+  --ease-out:cubic-bezier(.22,.7,.2,1);--ease-in-out:cubic-bezier(.65,.02,.3,1);
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);--ease-glide:cubic-bezier(.16,1,.3,1);
+  --dur-1:160ms;--dur-2:260ms;--dur-3:460ms;--dur-4:800ms;--dur-amb:14s;
+  --z-base:1;--z-sticky:100;
+  --stage-bg:#0d7a5f;--ring-bg:#062b23;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--font);font-size:var(--text-base);line-height:var(--leading-body);color:var(--text-body);background:var(--surface-1);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{color:var(--text-hi);line-height:var(--leading-tight);letter-spacing:var(--track-tight);text-wrap:balance}
+h2{font-size:var(--text-3xl);font-weight:800;letter-spacing:var(--track-display);line-height:var(--leading-display)}
+h3{font-size:var(--text-xl);font-weight:700}
+p{text-wrap:pretty}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{width:min(var(--wide),100% - 2*var(--gutter));margin-inline:auto}
+.sec{padding-block:var(--section-y)}
+.lead{font-size:var(--text-lg);max-width:var(--measure);color:var(--text-mute);margin-top:var(--sp-5)}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.on-dark{color:var(--on-body)}.on-dark h2,.on-dark h3{color:var(--on-hi)}.on-dark .lead{color:var(--on-mute)}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--sp-3);min-height:50px;padding:0 var(--sp-6);border-radius:var(--r-pill);font:700 var(--text-sm)/1 var(--font);text-decoration:none;border:1px solid transparent;cursor:pointer;white-space:nowrap;transition:transform var(--dur-2) var(--ease-spring),box-shadow var(--dur-2) var(--ease-out),background-color var(--dur-2) var(--ease-out),color var(--dur-2) var(--ease-out)}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:scale(.98)}
+.btn-clay{background:var(--accent-deep);color:var(--on-hi);box-shadow:var(--e-2)}
+.btn-clay:hover{box-shadow:var(--e-glow)}
+.btn-white{background:var(--surface-0);color:var(--ink-800);box-shadow:var(--e-2)}
+.btn-white:hover{background:var(--mint);box-shadow:var(--e-3)}
+.btn-glass{background:var(--glass);color:var(--on-hi);border-color:var(--on-line-strong);backdrop-filter:blur(14px);box-shadow:var(--e-inset)}
+.btn-glass:hover{background:var(--surface-0);color:var(--ink-800)}
+
+/* lockup */
+.lockup{display:inline-flex;align-items:center;gap:.2em;font-size:46px;text-decoration:none;line-height:1}
+.lockup svg{height:1.02em;width:.967em;flex:none}
+.lockup .t{display:flex;flex-direction:column}
+.lockup .n{font-weight:800;font-size:.68em;line-height:.86;letter-spacing:-.01em}
+.lockup .w{display:flex;justify-content:space-between;gap:.28em;font-weight:500;font-size:.215em;margin-top:.5em;text-transform:uppercase;line-height:1}
+
+/* hero */
+.hero{min-height:100vh;min-height:100dvh;padding:var(--sp-3);display:flex;background:var(--surface-1)}
+.frame{position:relative;flex:1;display:flex;flex-direction:column;border-radius:var(--r-lg);overflow:hidden;isolation:isolate;background:radial-gradient(70% 55% at 50% 68%,var(--brand-soft),transparent 70%),linear-gradient(180deg,var(--brand-deep),var(--brand) 45%,var(--brand-deep));box-shadow:var(--e-3)}
+.frame::before{content:'';position:absolute;inset:0;z-index:-1;background-image:radial-gradient(var(--dot) 1.2px,transparent 1.4px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%);animation:dots var(--dur-amb) linear infinite}
+@keyframes dots{to{background-position:44px 22px}}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-5);padding:var(--sp-4) var(--sp-6);color:var(--on-hi)}
+.nav .links{display:flex;gap:var(--sp-6);list-style:none;font-size:var(--text-sm);font-weight:500}
+.nav .links a{text-decoration:none;position:relative;padding-block:var(--sp-2);color:var(--on-body)}
+.nav .links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--accent-soft);transform:scaleX(0);transform-origin:left;transition:transform var(--dur-3) var(--ease-out)}
+.nav .links a:hover::after{transform:scaleX(1)}
+.nav .btn{min-height:42px;padding-inline:var(--sp-5)}
+.hero-head{text-align:center;padding:var(--sp-2) var(--sp-5) 0}
+.hero h1{color:var(--on-hi);font-size:var(--text-hero);font-weight:800;letter-spacing:var(--track-display);line-height:var(--leading-display);max-width:20ch;margin-inline:auto}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.hero h1 .ln>span{display:block;animation:rise var(--dur-4) var(--ease-glide) both}
+.hero h1 .ln:nth-child(2)>span{animation-delay:110ms;color:var(--mint)}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.hero-sub{display:flex;align-items:center;justify-content:center;gap:var(--sp-6);margin-top:var(--sp-4);flex-wrap:wrap;animation:fade var(--dur-4) var(--ease-out) 260ms both}
+.hero-sub p{color:var(--on-body);max-width:44ch;text-align:left;font-size:var(--text-sm);line-height:1.5}
+.hero-sub .acts{display:flex;gap:var(--sp-3);flex-wrap:wrap;justify-content:center}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.stage{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.5fr) minmax(0,1fr);gap:var(--sp-5);align-items:center;padding:var(--sp-3) var(--sp-6);min-height:290px}
+.win{background:var(--glass);border:1px solid var(--on-line);border-radius:var(--r-md);padding:var(--sp-2);backdrop-filter:blur(18px) saturate(140%);box-shadow:var(--e-3),var(--e-inset);color:var(--on-hi);position:relative;animation:bob 8s var(--ease-in-out) infinite alternate}
+.win img{width:100%;height:clamp(100px,19vh,200px);object-fit:cover;border-radius:var(--r-sm)}
+.win figcaption{padding:var(--sp-2) var(--sp-2) var(--sp-1);font-size:var(--text-sm);font-weight:500;line-height:1.35}
+.win::before,.win::after{content:'';position:absolute;width:9px;height:9px;background:var(--surface-0);border:2px solid var(--accent)}
+.win::before{left:-5px;top:-5px}.win::after{right:-5px;bottom:-5px}
+.win.a{--tilt:-3deg}.win.b{--tilt:3deg;animation-delay:-4s}
+@keyframes bob{from{transform:translateY(-7px) rotate(var(--tilt))}to{transform:translateY(9px) rotate(var(--tilt))}}
+.core{display:flex;flex-direction:column;height:100%;min-width:0}
+#terrain3d{position:relative;flex:1 0 auto;height:clamp(220px,34vh,420px);width:100%}
+#terrain3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+#terrain3d canvas:active{cursor:grabbing}
+.t3d-fallback{position:absolute;inset:0;width:100%;height:100%;transition:opacity var(--dur-3) var(--ease-out)}
+.t3d-fallback path{fill:none;stroke:var(--mint);stroke-width:2;stroke-linejoin:round}
+.t3d-fallback g{transform-box:fill-box;transform-origin:center;animation:lift 7s var(--ease-in-out) infinite alternate}
+.t3d-fallback g:nth-child(2){animation-delay:-1.6s}.t3d-fallback g:nth-child(3){animation-delay:-3.2s}.t3d-fallback g:nth-child(4){animation-delay:-4.8s}
+.t3d-fallback g:nth-child(4) path{stroke:var(--accent-soft)}
+@keyframes lift{from{transform:translateY(5px)}to{transform:translateY(-7px)}}
+#terrain3d.is-live .t3d-fallback{opacity:0;visibility:hidden}
+.layers{display:flex;justify-content:center;gap:var(--sp-1);margin-inline:auto;padding:var(--sp-1);border-radius:var(--r-pill);background:var(--glass-strong);border:1px solid var(--on-line);backdrop-filter:blur(14px);position:relative;z-index:var(--z-base);max-width:100%}
+.layers button{border:0;background:transparent;color:var(--on-body);font:500 var(--text-sm)/1 var(--font);padding:var(--sp-3) var(--sp-4);border-radius:var(--r-pill);cursor:pointer;transition:background-color var(--dur-2) var(--ease-out),color var(--dur-2) var(--ease-out)}
+.layers button:hover{background:var(--glass)}
+.layers button[aria-pressed="true"]{background:var(--surface-0);color:var(--ink-800);font-weight:700}
+.legal-hero{background:var(--ink-800);color:var(--surface-0);padding:var(--sp-3) var(--sp-6) var(--sp-4);font-size:clamp(.86rem,.8rem + .2vw,.95rem);line-height:1.5;text-align:center}
+.legal-hero p{max-width:1180px;margin-inline:auto}
+.legal-hero p+p{margin-top:var(--sp-1)}
+.legal-hero a,.foot .legal a{color:var(--mint);text-underline-offset:3px}
+
+/* barra fixa */
+.dock{position:fixed;top:var(--sp-3);left:50%;z-index:var(--z-sticky);display:flex;align-items:center;gap:var(--sp-5);padding:var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-5);border-radius:var(--r-pill);background:var(--dock-bg);border:1px solid var(--on-line);backdrop-filter:blur(18px) saturate(150%);box-shadow:var(--e-3);color:var(--on-hi);transform:translate(-50%,-160%);visibility:hidden;transition:transform var(--dur-3) var(--ease-glide),visibility var(--dur-3);white-space:nowrap}
+.dock.on{transform:translate(-50%,0);visibility:visible}
+.dock .lockup{font-size:32px}
+.dock a.l{text-decoration:none;font-size:var(--text-sm);font-weight:500}
+.dock a.l:hover{color:var(--mint)}
+.dock .btn{min-height:38px;padding-inline:var(--sp-4)}
+
+/* trajetória: texto + degraus */
+.traj{display:grid;grid-template-columns:5fr 7fr;gap:var(--sp-8);align-items:center}
+.portrait{position:relative;align-self:start}
+.portrait .shot{position:relative;isolation:isolate;margin:0 var(--sp-5) var(--sp-5) 0}
+.portrait .shot::before,.portrait .shot::after{content:'';position:absolute;inset:0;border-radius:var(--r-lg);z-index:-1;transform:translate(var(--sp-3),var(--sp-3));background:var(--brand);transition:transform var(--dur-3) var(--ease-spring)}
+.portrait .shot::after{z-index:-2;transform:translate(var(--sp-5),var(--sp-5));background:var(--accent)}
+.portrait .shot img{width:100%;height:auto;aspect-ratio:900/985;object-fit:cover;object-position:50% 0;border-radius:var(--r-lg);box-shadow:var(--e-3)}
+.portrait:hover .shot::before{transform:translate(var(--sp-4),var(--sp-4))}
+.portrait:hover .shot::after{transform:translate(var(--sp-6),var(--sp-6))}
+.who{margin-top:var(--sp-6);padding-left:var(--sp-5);border-left:4px solid var(--accent)}
+.who strong{display:block;font-size:var(--text-xl);color:var(--text-hi);line-height:var(--leading-tight)}
+.who span{color:var(--text-mute);font-size:var(--text-sm)}
+.traj h2{font-size:var(--text-2xl)}
+.traj .intro{margin-bottom:var(--sp-7)}
+.steps{display:flex;flex-direction:column;gap:var(--sp-3)}
+.step{display:grid;grid-template-columns:minmax(96px,auto) 1fr;gap:var(--sp-5);align-items:center;padding:var(--sp-5) var(--sp-6);border-radius:var(--r-md);box-shadow:var(--e-2),var(--e-inset);transition:transform var(--dur-3) var(--ease-spring),box-shadow var(--dur-3) var(--ease-out),background-color var(--dur-3) var(--ease-out),color var(--dur-3) var(--ease-out)}
+.step b{font-size:var(--text-2xl);letter-spacing:var(--track-display);line-height:1;font-variant-numeric:tabular-nums}
+.step p{font-size:var(--text-sm);line-height:1.5}
+.step:nth-child(1){margin-left:18%;background:var(--surface-0);color:var(--text-hi)}
+.step:nth-child(2){margin-left:12%;background:var(--surface-3);color:var(--text-hi)}
+.step:nth-child(3){margin-left:6%;background:var(--brand);color:var(--on-hi)}
+.step:nth-child(4){background:var(--ink-800);color:var(--on-hi)}
+.step:hover{transform:translateX(-10px);background:var(--accent-deep);color:var(--on-hi);box-shadow:var(--e-4)}
+.fine{font-size:var(--text-xs);color:var(--text-faint);margin-top:var(--sp-5);text-align:right}
+
+/* crises: cinta infinita */
+.crise{background:var(--stage-bg);transition:background-color var(--dur-4) var(--ease-in-out);overflow:hidden;position:relative}
+.belt{position:relative;height:clamp(430px,48vw,500px);margin-top:var(--sp-8);overflow:hidden;cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.belt.drag,.ring.drag,.deck.drag .card.top{cursor:grabbing}
+.track{position:absolute;inset:0;will-change:transform}
+.slide{position:absolute;top:0;left:0;width:min(760px,86vw);height:100%;display:grid;grid-template-columns:1fr 1.05fr;background:var(--surface-0);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--e-4)}
+.slide img{width:100%;height:100%;object-fit:cover;min-height:0;pointer-events:none}
+.slide .body{padding:var(--sp-7) var(--sp-6);display:flex;flex-direction:column;justify-content:space-between;gap:var(--sp-5);color:var(--text-body)}
+.slide .year{font-size:clamp(2.8rem,1.4rem + 3.8vw,5rem);font-weight:800;letter-spacing:var(--track-display);line-height:1;color:var(--brand);font-variant-numeric:tabular-nums}
+.slide h3{margin-bottom:var(--sp-3)}
+.slide .body p{font-size:var(--text-sm)}
+.ctrl{display:flex;justify-content:center;align-items:center;gap:var(--sp-4);margin-top:var(--sp-6)}
+.arrow{width:52px;height:52px;border-radius:var(--r-pill);border:1px solid var(--on-line-strong);background:var(--glass);color:var(--on-hi);font-size:1.3rem;cursor:pointer;backdrop-filter:blur(12px);transition:background-color var(--dur-2) var(--ease-out),color var(--dur-2) var(--ease-out),transform var(--dur-2) var(--ease-spring)}
+.arrow:hover{background:var(--surface-0);color:var(--ink-800);transform:scale(1.08)}
+.hint{font-size:var(--text-sm);color:var(--on-body)}
+
+/* estratégias: bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(330px,auto);gap:var(--sp-4);margin-top:var(--sp-8)}
+.tile{position:relative;border-radius:var(--r-lg);overflow:hidden;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;padding:var(--sp-5);color:var(--on-hi);box-shadow:var(--e-2);transition:transform var(--dur-3) var(--ease-out),box-shadow var(--dur-3) var(--ease-out)}
+.tile>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform var(--dur-4) var(--ease-glide)}
+.tile::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,28,23,.05) 15%,rgba(4,28,23,.86));transition:background-color var(--dur-3) var(--ease-out),opacity var(--dur-3) var(--ease-out)}
+.tile .wash{position:absolute;inset:0;z-index:-1;background:var(--tint);opacity:0;transition:opacity var(--dur-3) var(--ease-out)}
+.tile:hover{transform:translateY(-6px);box-shadow:var(--e-4)}
+.tile:hover>img{transform:scale(1.07)}
+.tile:hover .wash{opacity:.72}
+.tile .pane{background:var(--glass-strong);border:1px solid var(--on-line);border-radius:var(--r-md);padding:var(--sp-5);backdrop-filter:blur(16px) saturate(130%);box-shadow:var(--e-inset);max-width:600px}
+.tile h3{color:var(--on-hi)}
+.tile .s{margin-top:var(--sp-2);font-weight:500;line-height:1.45}
+.tile .r{margin-top:var(--sp-3);padding-top:var(--sp-3);border-top:1px solid var(--on-line);font-size:var(--text-xs);color:var(--on-mute);line-height:1.5}
+.t1{grid-column:span 7;grid-row:span 2;--tint:var(--brand)}
+.t1 h3{font-size:var(--text-2xl);letter-spacing:var(--track-display)}
+.t2{grid-column:span 5;--tint:var(--accent-deep)}
+.t3{grid-column:span 5;--tint:var(--ink-600)}
+.t3>img{object-position:50% 30%}
+.t4{grid-column:span 12;--tint:var(--accent-deep)}
+
+/* modelo: pilha infinita */
+.model{background:var(--surface-2);overflow:hidden}
+.model .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:center}
+.model .ctrl{justify-content:flex-start}
+.model .arrow{border-color:var(--line-strong);color:var(--text-hi);background:var(--surface-0)}
+.model .arrow:hover{background:var(--ink-800);color:var(--on-hi)}
+.model .hint{color:var(--text-mute)}
+.deck{position:relative;height:440px;width:min(440px,100%);margin:0 auto var(--sp-7);user-select:none;-webkit-user-select:none}
+.card{position:absolute;inset:0;border-radius:var(--r-lg);padding:var(--sp-7);display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--e-3),var(--e-inset);color:var(--on-hi);background:var(--c);transform-origin:50% 100%;transition:transform var(--dur-3) var(--ease-spring),opacity var(--dur-3) var(--ease-out);touch-action:pan-y}
+.card.top{cursor:grab}
+.card.free{transition:none}
+.card h3{color:var(--on-hi);font-size:var(--text-2xl);letter-spacing:var(--track-display)}
+.card p{margin-top:var(--sp-4);color:var(--on-body)}
+.card svg{width:96px;height:96px;opacity:.95}
+.card:nth-child(1){--c:var(--brand-deep)}.card:nth-child(2){--c:var(--accent-deep)}.card:nth-child(3){--c:var(--ink-800)}
+.card:nth-child(4){--c:var(--brand)}.card:nth-child(5){--c:var(--ink-600)}.card:nth-child(6){--c:var(--ink-700)}
+
+/* para quem: mural */
+.wall{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:var(--sp-6);align-items:center}
+.col{display:flex;flex-direction:column;gap:var(--sp-7)}
+.pol{background:var(--surface-0);padding:var(--sp-3) var(--sp-3) var(--sp-4);border-radius:var(--r-sm);box-shadow:var(--e-3);transform:rotate(var(--rot));transition:transform var(--dur-3) var(--ease-spring),box-shadow var(--dur-3) var(--ease-out)}
+.pol:hover{transform:rotate(0) scale(1.05);box-shadow:var(--e-4);position:relative;z-index:var(--z-base)}
+.pol img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-sm)}
+.pol figcaption{font-size:var(--text-sm);font-weight:700;color:var(--text-hi);margin-top:var(--sp-3);text-align:center}
+.who-list{list-style:none;margin-top:var(--sp-6);display:grid;gap:var(--sp-3);text-align:left}
+.who-list li{background:var(--surface-0);border-radius:var(--r-md);padding:var(--sp-4) var(--sp-5);box-shadow:var(--e-1);border:1px solid var(--line-faint);transition:background-color var(--dur-2) var(--ease-out),color var(--dur-2) var(--ease-out),transform var(--dur-2) var(--ease-spring)}
+.who-list li:hover{background:var(--brand);color:var(--on-hi);transform:scale(1.02)}
+
+/* valores: cilindro 3D */
+.values{background:var(--ring-bg);transition:background-color var(--dur-4) var(--ease-in-out);overflow:hidden}
+.ring{height:400px;perspective:1300px;margin-top:var(--sp-7);cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;position:relative}
+.spin{position:absolute;left:50%;top:50%;transform-style:preserve-3d}
+.face{position:absolute;width:var(--fw,250px);height:320px;left:calc(var(--fw,250px) / -2);top:-160px;border-radius:var(--r-md);padding:var(--sp-5);display:flex;flex-direction:column;justify-content:flex-end;background:var(--surface-0);color:var(--text-body);box-shadow:var(--e-4);backface-visibility:hidden;-webkit-backface-visibility:hidden;transition:background-color var(--dur-3) var(--ease-out),color var(--dur-3) var(--ease-out)}
+.face h3{font-size:var(--text-xl)}
+.face p{font-size:var(--text-sm);margin-top:var(--sp-2);line-height:1.5}
+.face svg{width:72px;height:72px;margin-bottom:auto}
+.face svg path{stroke:var(--brand)}
+.face.front{background:var(--accent-deep);color:var(--on-hi)}
+.face.front h3{color:var(--on-hi)}
+.face.front svg path{stroke:var(--on-hi)}
+
+/* missão e visão: blocos com corte em V */
+.mv{display:grid;grid-template-columns:1fr 1fr}
+.mv article{padding:var(--section-y) var(--gutter)}
+.mv .m{background:var(--brand);color:var(--on-hi);clip-path:polygon(0 0,100% 0,100% 100%,50% 94%,0 100%)}
+.mv .v{background:var(--surface-0)}
+.mv h2{font-size:var(--text-2xl)}
+.mv .m h2{color:var(--on-hi)}
+.mv p{font-size:var(--text-xl);line-height:1.45;margin-top:var(--sp-5);max-width:30ch}
+
+/* conteúdos */
+.learn{display:grid;grid-template-columns:5fr 6fr;gap:var(--sp-8);align-items:start}
+.learn figure{position:relative;margin-top:var(--sp-6)}
+.learn figure img{width:100%;height:340px;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--e-3)}
+.topic{background:var(--surface-0);border-radius:var(--r-md);box-shadow:var(--e-1);margin-bottom:var(--sp-3);transition:box-shadow var(--dur-2) var(--ease-out),background-color var(--dur-2) var(--ease-out)}
+.topic:hover{box-shadow:var(--e-3)}
+.topic summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:var(--sp-5);align-items:center;padding:var(--sp-5) var(--sp-6);font-weight:700;font-size:var(--text-lg);color:var(--text-hi);line-height:1.35}
+.topic summary::-webkit-details-marker{display:none}
+.topic summary::after{content:'+';font-weight:500;font-size:var(--text-xl);color:var(--accent-deep);transition:transform var(--dur-3) var(--ease-spring)}
+.topic[open] summary::after{transform:rotate(45deg)}
+.topic p{padding:0 var(--sp-6) var(--sp-5);color:var(--text-mute);max-width:var(--measure)}
+.topic[open] p{animation:fade var(--dur-3) var(--ease-out)}
+
+/* contato */
+.contact{padding:var(--sp-3)}
+.contact .box{position:relative;isolation:isolate;border-radius:var(--r-lg);overflow:hidden;padding:var(--section-y) var(--gutter);text-align:center}
+.contact .box>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.contact .box::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,99,77,.9),rgba(4,28,23,.86))}
+.contact .lead{margin-inline:auto}
+.contact .acts{display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;margin-top:var(--sp-7)}
+.contact .mail{margin-top:var(--sp-5);font-size:var(--text-sm);color:var(--on-mute);overflow-wrap:anywhere}
+
+/* rodapé */
+.foot{background:var(--ink-900);color:var(--on-body);padding-top:var(--sp-9);overflow:hidden}
+.foot .grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:var(--sp-7)}
+.foot h3{font-size:var(--text-base);color:var(--on-hi);margin-bottom:var(--sp-3)}
+.foot ul{list-style:none;font-size:var(--text-sm);display:grid;gap:var(--sp-2);overflow-wrap:anywhere}
+.foot ul a{text-decoration:none}.foot ul a:hover{color:var(--mint);text-decoration:underline}
+.foot .pow{display:inline-block;margin-top:var(--sp-5);padding:var(--sp-2) var(--sp-4);border:1px solid var(--on-line-strong);border-radius:var(--r-pill);font-size:var(--text-sm);font-weight:700}
+.foot details{margin-top:var(--sp-7);font-size:var(--text-sm)}
+.foot summary{cursor:pointer;font-weight:700}
+.foot details p{margin-top:var(--sp-3);max-width:80ch}
+.foot .legal{margin-top:var(--sp-6);padding-top:var(--sp-6);border-top:1px solid var(--on-line);font-size:var(--text-base);color:var(--surface-0);line-height:1.6}
+.foot .legal p+p{margin-top:var(--sp-3)}
+.foot .copy{font-size:var(--text-sm);color:var(--on-mute);margin-top:var(--sp-5)}
+.giant{font-size:var(--text-giant);font-weight:800;letter-spacing:-.05em;line-height:.82;text-align:center;white-space:nowrap;margin-top:var(--sp-7);color:transparent;background:linear-gradient(180deg,var(--brand-soft),var(--ink-900) 96%);-webkit-background-clip:text;background-clip:text;user-select:none}
+
+.js [data-reveal]{opacity:0;transform:translateY(26px);transition:opacity var(--dur-4) var(--ease-glide),transform var(--dur-4) var(--ease-glide)}
+.js [data-reveal].in{opacity:1;transform:none}
+.pol[data-reveal].in{transform:rotate(var(--rot))}
+.pol[data-reveal].in:hover{transform:rotate(0) scale(1.05)}
+
+@media (max-width:1080px){
+  .nav .links,.dock a.l{display:none}
+  .traj,.model .wrap,.learn{grid-template-columns:1fr}
+  .portrait{width:min(480px,100%);margin-inline:auto}
+  .wall{grid-template-columns:1fr 1fr}
+  .wall .mid{grid-column:1/-1;order:-1}
+  .t1,.t2,.t3{grid-column:span 12;grid-row:auto}
+  .foot .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .stage{grid-template-columns:1fr 1fr;gap:var(--sp-4);padding-inline:var(--sp-4)}
+  .core{grid-column:1/-1;order:-1;height:320px}
+  #terrain3d{height:240px}
+  .win img{height:110px}
+  .hero-sub p{text-align:center}
+}
+@media (max-width:640px){
+  .nav{padding:var(--sp-3) var(--sp-4)}
+  .lockup{font-size:40px}
+  .nav .btn{min-height:40px;padding-inline:var(--sp-4)}
+  .hero-sub{gap:var(--sp-4)}
+  .core{height:auto}
+  #terrain3d{height:220px}
+  .layers{display:grid;grid-template-columns:1fr 1fr;border-radius:var(--r-md);width:100%}
+  .win figcaption{font-size:var(--text-xs)}
+  .legal-hero{padding-inline:var(--sp-4);text-align:left}
+  .step,.step:nth-child(n){margin-left:0;grid-template-columns:1fr;gap:var(--sp-2)}
+  .belt{height:560px}
+  .slide{grid-template-columns:1fr;grid-template-rows:200px 1fr}
+  .slide .body{padding:var(--sp-5);justify-content:flex-start;gap:var(--sp-3)}
+  .hint{display:none}
+  .tile{padding:var(--sp-3);min-height:420px}
+  .tile .pane{padding:var(--sp-4)}
+  .deck{height:420px;width:calc(100% - 20px)}
+  .card{padding:var(--sp-6)}
+  .wall{gap:var(--sp-4)}
+  .col{gap:var(--sp-5)}
+  .mv,.foot .grid{grid-template-columns:1fr}
+  .dock{gap:var(--sp-4);padding-left:var(--sp-4)}
+  .contact .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .frame::before{animation-duration:60s}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs><clipPath id="vgc"><path d="M0 27.5 L104 2.6 V100 H0Z"/></clipPath></defs>
+  <symbol id="vgmark" viewBox="10 2 91 96"><g clip-path="url(#vgc)" fill="none" stroke="currentColor" stroke-width="7.6" stroke-miterlimit="8"><path d="M-6.71 -20 L50 87 L106.71 -20"/><path d="M5.48 -20 L50 64 L94.52 -20"/><path d="M17.67 -20 L50 41 L82.33 -20"/></g></symbol>
+</svg>
+
+<nav class="dock" id="dock" aria-label="Navegação rápida">
+  <a class="lockup" href="#inicio" aria-label="VG Wealth, voltar ao início"><svg><use href="#vgmark"/></svg><span class="t"><span class="n">VG</span><span class="w"><span>W</span><span>e</span><span>a</span><span>l</span><span>t</span><span>h</span></span></span></a>
+  <a class="l" href="#trajetoria">Trajetória</a><a class="l" href="#estrategias">Estratégia</a><a class="l" href="#modelo">Atendimento</a><a class="l" href="#valores">Valores</a>
+  <a class="btn btn-clay" href="#contato">Falar com a VG</a>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="frame">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="lockup" href="#inicio" aria-label="VG Wealth"><svg><use href="#vgmark"/></svg><span class="t"><span class="n">VG</span><span class="w"><span>W</span><span>e</span><span>a</span><span>l</span><span>t</span><span>h</span></span></span></a>
+      <ul class="links"><li><a href="#trajetoria">Trajetória</a></li><li><a href="#estrategias">Estratégia</a></li><li><a href="#modelo">Atendimento</a></li><li><a href="#valores">Valores</a></li><li><a href="#conteudos">Conteúdos</a></li></ul>
+      <a class="btn btn-white" href="#contato">Falar com a VG</a>
+    </nav>
+    <div class="hero-head">
+      <h1><span class="ln"><span>Educação financeira para</span></span> <span class="ln"><span>construir seu futuro.</span></span></h1>
+      <div class="hero-sub">
+        <p>Planejamento patrimonial de longo prazo, construído em camadas, para pessoas, famílias e empresários.</p>
+        <div class="acts">
+          <a class="btn btn-clay" href="https://wa.me/5564992521785?text=Ol%C3%A1%2C%20Valtinho.%20Quero%20conversar%20sobre%20meu%20planejamento%20patrimonial." target="_blank" rel="noopener">Falar com a VG</a>
+          <a class="btn btn-glass" href="#modelo">Ver o atendimento</a>
+        </div>
+      </div>
+    </div>
+    <div class="stage">
+      <figure class="win a"><img src="img/plantio.jpg" width="1024" height="683" alt="Linhas de plantio recém-brotadas em terra escura" fetchpriority="high"><figcaption>Todo patrimônio começa por uma primeira camada.</figcaption></figure>
+      <div class="core">
+        <div id="terrain3d">
+          <svg class="t3d-fallback" viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Curvas de nível em quatro camadas">
+            <g><path d="M30 214C62 138 170 118 268 128c92 10 140-22 214 2s108 76 62 112-148 34-250 40S10 280 30 214Z"/></g>
+            <g><path d="M104 196c22-52 100-66 174-56s108-26 164-4 66 62 28 86-112 22-188 30-196-6-178-56Z"/></g>
+            <g><path d="M184 172c14-34 68-40 112-30s70-28 112-8 34 48 2 62-72 6-118 16-120-6-108-40Z"/></g>
+            <g><path d="M268 142c8-20 34-22 60-18s40-18 62-2 10 30-12 34-38-2-62 6-56 0-48-20Z"/></g>
+          </svg>
+        </div>
+        <div class="layers" role="group" aria-label="Camadas do planejamento">
+          <button type="button" data-terrain-layer="0" aria-pressed="true">Entender</button>
+          <button type="button" data-terrain-layer="1" aria-pressed="false">Organizar</button>
+          <button type="button" data-terrain-layer="2" aria-pressed="false">Planejar</button>
+          <button type="button" data-terrain-layer="3" aria-pressed="false">Acompanhar</button>
+        </div>
+      </div>
+      <figure class="win b"><img src="img/pai.jpg" width="960" height="640" alt="Pai abraçando a filha em um campo aberto"><figcaption>Planos que pensam em quem vem depois.</figcaption></figure>
+    </div>
+    <div class="legal-hero">
+      <p>A VG Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM.</p>
+      <p>Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="sec" id="trajetoria">
+  <div class="wrap traj">
+    <figure class="portrait" data-reveal>
+      <div class="shot"><img src="img/valtinho.jpg" width="900" height="985" alt="Retrato de Valtinho Gomes dos Santos, Banker da VG Wealth, sorrindo, de blazer azul-marinho e camisa branca" loading="lazy"></div>
+      <figcaption class="who"><strong>Valtinho Gomes dos Santos</strong><span>Banker da VG Wealth</span></figcaption>
+    </figure>
+    <div>
+      <div class="intro" data-reveal>
+        <h2>Experiência que já atravessou tempos difíceis.</h2>
+        <p class="lead">A VG Wealth nasce para ajudar famílias a construir patrimônio respeitando o perfil e os objetivos de cada uma, principalmente os de longo prazo.</p>
+      </div>
+      <div class="steps">
+        <div class="step" data-reveal><b>2017</b><p>Começo da vivência pessoal com o próprio patrimônio, como pessoa física.</p></div>
+        <div class="step" data-reveal><b>Crises</b><p>Experiência com crises como a greve dos caminhoneiros, a covid-19 e guerras, com atenção ao que muda em um plano.</p></div>
+        <div class="step" data-reveal><b>Formação</b><p>Graduado na área financeira.</p></div>
+        <div class="step" data-reveal><b>C-Pro I</b><p>Certificação profissional C-Pro I ANBIMA.</p></div>
+      </div>
+      <p class="fine">A certificação profissional não equivale a autorização regulatória para atividades específicas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec crise on-dark" id="crises" aria-label="Tempos de crise">
+  <div class="wrap center" data-reveal>
+    <h2>O longo prazo passa por estações difíceis.</h2>
+    <p class="lead">O que cada período lembra a quem está construindo patrimônio.</p>
+  </div>
+  <div class="belt" id="belt" tabindex="0" role="region" aria-roledescription="carrossel" aria-label="Linha do tempo arrastável. Use as setas do teclado.">
+    <div class="track">
+      <article class="slide" data-bg="var(--brand)"><img src="img/lavoura.jpg" width="1024" height="683" alt="Trator em uma lavoura florida" loading="lazy" draggable="false"><div class="body"><span class="year">2017</span><div><h3>O começo</h3><p>Começar cedo permite aprender com o próprio caminho, um passo de cada vez, antes de as decisões ficarem maiores.</p></div></div></article>
+      <article class="slide" data-bg="var(--accent-deep)"><img src="img/estrada.jpg" width="1024" height="681" alt="Caminhões vistos de dentro de um carro em uma rodovia" loading="lazy" draggable="false"><div class="body"><span class="year">2018</span><div><h3>Greve dos caminhoneiros</h3><p>O país parou nas estradas. Um lembrete de que a reserva para o dia a dia precisa existir antes do imprevisto.</p></div></div></article>
+      <article class="slide" data-bg="var(--ink-700)"><img src="img/mascara.jpg" width="960" height="640" alt="Mulher usando máscara de proteção na rua" loading="lazy" draggable="false"><div class="body"><span class="year">2020</span><div><h3>Covid-19</h3><p>A pandemia mudou rotinas e rendas. Liquidez, proteção da família e calma para decidir ganharam outro peso.</p></div></div></article>
+      <article class="slide" data-bg="var(--ink-900)"><img src="img/tempestade.jpg" width="1024" height="683" alt="Céu de tempestade sobre um campo ao entardecer" loading="lazy" draggable="false"><div class="body"><span class="year">Guerras</span><div><h3>O mundo em tensão</h3><p>Conflitos distantes chegam a preços e câmbio. Olhar além das fronteiras faz parte de um plano completo.</p></div></div></article>
+      <article class="slide" data-bg="var(--ink-600)"><img src="img/seca.jpg" width="682" height="1024" alt="Árvores sem folhas contra o sol, na estação seca" loading="lazy" draggable="false"><div class="body"><span class="year">Hoje</span><div><h3>A próxima estação</h3><p>Ninguém controla a próxima crise. Dá para chegar a ela com objetivos claros, prioridades e um plano que se revisa.</p></div></div></article>
+    </div>
+  </div>
+  <div class="ctrl"><button class="arrow" type="button" data-belt="-1" aria-label="Período anterior">&#8592;</button><span class="hint">Arraste. A linha do tempo não tem fim.</span><button class="arrow" type="button" data-belt="1" aria-label="Próximo período">&#8594;</button></div>
+</section>
+
+<section class="sec" id="estrategias">
+  <div class="wrap">
+    <div class="center" data-reveal>
+      <h2>Uma única estratégia de planejamento</h2>
+      <p class="lead">Cada frente é uma camada do mesmo plano, pensada junto com as outras.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t1" data-reveal><img src="img/familia.jpg" width="960" height="640" alt="Família sorrindo junta em um parque" loading="lazy"><span class="wash"></span><div class="pane"><h3>Planejamento para investimentos</h3><p class="s">Estratégias para acumular, proteger e multiplicar seu patrimônio</p><p class="r">A VG Wealth organiza objetivos, prazos e prioridades. Serviços sujeitos a regulação são prestados pelas empresas e profissionais habilitados do AWT Group, mediante contratação específica e sem garantia de resultado.</p></div></article>
+      <article class="tile t2" data-reveal><img src="img/previdencia.jpg" width="1024" height="680" alt="Casal caminhando abraçado por uma estrada no campo" loading="lazy"><span class="wash"></span><div class="pane"><h3>Previdência</h3><p class="s">Estratégias para conquistar eficiência tributária e sucessória</p><p class="r">Produtos e benefícios dependem das condições de cada plano, oferecido por instituições habilitadas por meio do ecossistema AWT Group.</p></div></article>
+      <article class="tile t3" data-reveal><img src="img/imovel.jpg" width="960" height="1440" alt="Guindaste ao lado de um edifício em construção" loading="lazy"><span class="wash"></span><div class="pane"><h3>Imobiliário</h3><p class="s">Planejamento para aquisição de imóveis, consórcios e financiamentos</p><p class="r">Análise, aprovação e contratação cabem às instituições habilitadas, acessadas pelo ecossistema AWT Group.</p></div></article>
+      <article class="tile t4" data-reveal><img src="img/mundo.jpg" width="1024" height="683" alt="Passaporte sobre um mapa-múndi colorido" loading="lazy"><span class="wash"></span><div class="pane"><h3>Internacional / Offshore</h3><p class="s">Estratégias para diversificação geográfica e proteção em moeda forte</p><p class="r">Operações internacionais, de câmbio e demais serviços regulados são realizados por instituições autorizadas do ecossistema AWT Group, observadas as obrigações declaratórias e tributárias.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec model" id="modelo">
+  <div class="wrap">
+    <div data-reveal>
+      <h2>Como a conversa vira plano.</h2>
+      <p class="lead">Um atendimento próximo, em seis movimentos que se repetem conforme sua vida muda. Arraste o cartão da frente para ver o seguinte.</p>
+      <div class="ctrl"><button class="arrow" type="button" data-deck="-1" aria-label="Cartão anterior">&#8592;</button><button class="arrow" type="button" data-deck="1" aria-label="Próximo cartão">&#8594;</button><span class="hint">O ciclo recomeça.</span></div>
+    </div>
+    <div class="deck" id="deck" aria-live="polite">
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Compreender</h3><p>Ouvir sua história, sua família, seu trabalho e a realidade do seu patrimônio.</p></div></article>
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Organizar</h3><p>Colocar prioridades, objetivos e prazos em ordem, em linguagem simples.</p></div></article>
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Planejar</h3><p>Desenhar o planejamento financeiro e patrimonial respeitando seu perfil.</p></div></article>
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Identificar</h3><p>Reconhecer quando um tema pede um especialista habilitado.</p></div></article>
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Conectar</h3><p>Facilitar o acesso às soluções do ecossistema AWT Group.</p></div></article>
+      <article class="card"><svg aria-hidden="true"><use href="#vgmark"/></svg><div><h3>Acompanhar</h3><p>Rever objetivos com você ao longo do relacionamento, porque a vida muda.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="para-quem">
+  <div class="wrap wall">
+    <div class="col">
+      <figure class="pol" style="--rot:-5deg" data-reveal><img src="img/empresarios.jpg" width="1300" height="867" alt="Dois comerciantes atrás de uma banca de produtos" loading="lazy"><figcaption>Quem empreende</figcaption></figure>
+      <figure class="pol" style="--rot:3deg" data-reveal><img src="img/campo.jpg" width="1300" height="867" alt="Campo verde sob céu azul com nuvens e silos ao fundo" loading="lazy"><figcaption>Centro-Oeste</figcaption></figure>
+    </div>
+    <div class="mid center" data-reveal>
+      <h2>Para quem quer construir com o tempo.</h2>
+      <ul class="who-list">
+        <li>Pessoas físicas e empresários.</li>
+        <li>Patrimônio a partir de R$&nbsp;300 mil.</li>
+        <li>Quem deseja construir patrimônio e diversificar com foco no longo prazo.</li>
+        <li>Proximidade com o Centro-Oeste e o objetivo de atender famílias de todo o Brasil.</li>
+      </ul>
+    </div>
+    <div class="col">
+      <figure class="pol" style="--rot:5deg" data-reveal><img src="img/conversa.jpg" width="960" height="640" alt="Duas pessoas conversando em uma mesa junto à janela" loading="lazy"><figcaption>Conversa próxima</figcaption></figure>
+      <figure class="pol" style="--rot:-3deg" data-reveal><img src="img/lavoura.jpg" width="1024" height="683" alt="Máquina agrícola trabalhando no campo" loading="lazy"><figcaption>Trabalho de uma vida</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec values on-dark" id="valores">
+  <div class="wrap center" data-reveal>
+    <h2>Cinco valores, a base de cada camada.</h2>
+    <p class="lead">Gire o anel com o dedo ou o mouse.</p>
+  </div>
+  <div class="ring" id="ring" tabindex="0" role="region" aria-label="Valores em anel giratório. Use as setas do teclado."><div class="spin" id="spin"></div></div>
+  <div class="ctrl"><button class="arrow" type="button" data-ring="-1" aria-label="Valor anterior">&#8592;</button><button class="arrow" type="button" data-ring="1" aria-label="Próximo valor">&#8594;</button></div>
+</section>
+
+<section class="mv" aria-label="Missão e visão">
+  <article class="m"><div data-reveal><h2>Missão</h2><p>Ajudar famílias que queiram construir patrimônio, respeitando o seu perfil e os seus objetivos, principalmente os de longo prazo.</p></div></article>
+  <article class="v"><div data-reveal><h2>Visão</h2><p>Ser uma referência em educação financeira e planejamento patrimonial para famílias de todo o Brasil, principalmente no Centro-Oeste, contribuindo para um patrimônio que atravesse gerações.</p></div></article>
+</section>
+
+<section class="sec" id="conteudos">
+  <div class="wrap learn">
+    <div data-reveal>
+      <h2>Aprender também faz parte do plano.</h2>
+      <figure><img src="img/estudo.jpg" width="960" height="640" alt="Mãos escrevendo em um caderno ao lado de um café" loading="lazy"></figure>
+    </div>
+    <div data-reveal>
+      <details class="topic" open><summary>Reserva e liquidez: por onde começar</summary><p>Antes de pensar longe, vale saber quanto custa um mês da sua vida e quanto precisa estar disponível para um imprevisto. Esse número muda com a renda, a família e o tipo de trabalho.</p></details>
+      <details class="topic"><summary>Objetivos de longo prazo em família</summary><p>Um objetivo fica mais claro quando tem nome, prazo e prioridade. Conversar em casa sobre o que cada um espera evita planos que competem entre si.</p></details>
+      <details class="topic"><summary>Previdência e longevidade</summary><p>Viver mais pede renda por mais tempo. Compreender necessidades futuras, prazos e as regras de cada tipo de plano ajuda a decidir com informação.</p></details>
+      <details class="topic"><summary>O papel da diversificação e os riscos</summary><p>Diversificar distribui a exposição entre diferentes caminhos, mas não elimina riscos nem garante resultados. Por isso perfil, prazo e liquidez vêm antes de qualquer decisão.</p></details>
+      <p class="fine">Conteúdo educativo e geral. Não constitui recomendação individualizada.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact on-dark" id="contato">
+  <div class="box">
+    <img src="img/seca.jpg" width="682" height="1024" alt="Silhueta de árvores do campo ao pôr do sol" loading="lazy">
+    <div data-reveal>
+      <h2>Vamos construir a primeira camada?</h2>
+      <p class="lead">Agende uma conversa sobre seus objetivos financeiros e conheça o nosso modelo de atendimento.</p>
+      <div class="acts">
+        <a class="btn btn-clay" href="https://wa.me/5564992521785?text=Ol%C3%A1%2C%20Valtinho.%20Quero%20conversar%20sobre%20meu%20planejamento%20patrimonial." target="_blank" rel="noopener">Falar com a VG</a>
+        <a class="btn btn-white" href="mailto:valtinhoconsultordeseguros@gmail.com?subject=Conversa%20com%20a%20VG%20Wealth">Enviar um e-mail</a>
+      </div>
+      <p class="mail">WhatsApp +55 (64) 99252-1785<br>valtinhoconsultordeseguros@gmail.com</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="grid">
+      <div><span class="lockup"><svg><use href="#vgmark"/></svg><span class="t"><span class="n">VG</span><span class="w"><span>W</span><span>e</span><span>a</span><span>l</span><span>t</span><span>h</span></span></span></span><p style="margin-top:var(--sp-4)">Educação financeira para construir seu futuro.</p><span class="pow">Powered by AWT</span></div>
+      <div><h3>Contato</h3><ul><li><a href="https://wa.me/5564992521785" target="_blank" rel="noopener">WhatsApp +55 (64) 99252-1785</a></li><li><a href="tel:+5564992521785">Telefone +55 (64) 99252-1785</a></li><li><a href="mailto:valtinhoconsultordeseguros@gmail.com">valtinhoconsultordeseguros@gmail.com</a></li></ul></div>
+      <div><h3>No site</h3><ul><li><a href="#trajetoria">Trajetória</a></li><li><a href="#estrategias">Estratégia</a></li><li><a href="#modelo">Atendimento</a></li><li><a href="#conteudos">Conteúdos</a></li><li><a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">AWT Group</a></li></ul></div>
+    </div>
+    <details><summary>Política de Privacidade</summary><p>Este site não tem formulários nem cadastro, e a VG Wealth não instala nele cookies de publicidade ou de análise. As fontes são carregadas do Google Fonts e bibliotecas visuais podem vir de uma rede de distribuição, que recebem dados técnicos da conexão, como o endereço IP. Se você escrever por WhatsApp ou e-mail, os dados enviados são usados para responder ao seu contato, e esses serviços seguem as próprias políticas. Pedidos sobre seus dados podem ser feitos pelo e-mail acima.</p></details>
+    <div class="legal">
+      <p>A VG Wealth integra o ecossistema da AWT Alliance S.A. e atua em educação financeira e planejamento financeiro e patrimonial. Serviços sujeitos a regulação são prestados pelas empresas do AWT Group devidamente habilitadas para cada atividade. A administração e gestão de carteiras de valores mobiliários é realizada pela AWT Consultoria e Administração de Valores Mobiliários Ltda., CNPJ 35.137.445/0001-00, registrada perante a CVM.</p>
+      <p>Consulte os Avisos Legais e Regulatórios do AWT Group: <a href="https://www.awtgroup.com.br" target="_blank" rel="noopener">www.awtgroup.com.br</a></p>
+    </div>
+    <p class="copy">&copy; 2026 VG Wealth</p>
+  </div>
+  <div class="giant" aria-hidden="true">VG Wealth</div>
+</footer>
+
+<script>
+(()=>{
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const mod=(a,n)=>((a%n)+n)%n;
+const seen=new WeakSet();
+const visible=el=>{let v=false;new IntersectionObserver(e=>v=e[0].isIntersecting,{threshold:.2}).observe(el);return()=>v};
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+$$('[data-reveal]').forEach(el=>io.observe(el));
+const dock=$('#dock');
+new IntersectionObserver(e=>dock.classList.toggle('on',!e[0].isIntersecting),{rootMargin:'-90px 0px 0px 0px'}).observe($('#inicio'));
+
+/* arrasto genérico: só captura quando o movimento é horizontal */
+function drag(el,{start,move,end}){
+  let x0,y0,id=null,on=false,last,lt,v=0;
+  el.addEventListener('pointerdown',e=>{if(e.button)return;id=e.pointerId;x0=last=e.clientX;y0=e.clientY;lt=e.timeStamp;v=0;on=false});
+  el.addEventListener('pointermove',e=>{
+    if(e.pointerId!==id)return;
+    const dx=e.clientX-x0;
+    if(!on){if(Math.abs(dx)<5||Math.abs(dx)<Math.abs(e.clientY-y0))return;on=true;el.setPointerCapture(id);el.classList.add('drag');start&&start()}
+    v=(e.clientX-last)/Math.max(1,e.timeStamp-lt);last=e.clientX;lt=e.timeStamp;move(dx);
+  });
+  const stop=e=>{if(e.pointerId!==id)return;id=null;if(on){on=false;el.classList.remove('drag');end(e.clientX-x0,v)}};
+  el.addEventListener('pointerup',stop);el.addEventListener('pointercancel',stop);
+}
+
+/* cinta infinita da linha do tempo */
+(()=>{
+  const belt=$('#belt'),track=$('.track',belt),orig=$$('.slide',track),N=orig.length,sec=$('#crises');
+  for(let k=0;k<2;k++)orig.forEach(s=>{const c=s.cloneNode(true);c.setAttribute('aria-hidden','true');track.appendChild(c)});
+  const all=$$('.slide',track);
+  let w,stride,pos=0,target=0,held=false,base=0,idle=0,cur=-1,prev=performance.now();
+  const size=()=>{const old=stride;w=all[0].offsetWidth;stride=w+(innerWidth<640?14:28);if(old){pos=pos/old*stride;target=target/old*stride}all.forEach((s,i)=>s.style.left=i*stride+'px')};
+  size();addEventListener('resize',size);
+  const isVis=visible(belt);
+  const go=d=>{target=(Math.round(target/stride)+d)*stride;idle=0};
+  $$('[data-belt]').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.belt)));
+  belt.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+  drag(belt,{start(){held=true;base=pos},move(dx){pos=target=base-dx},end(dx,v){held=false;const f=Math.max(-stride*.6,Math.min(stride*.6,v*260));let n=Math.round((pos-f)/stride);if(n===Math.round(base/stride)&&Math.abs(dx)>60)n+=dx<0?1:-1;target=n*stride;idle=0}});
+  (function loop(t){
+    const dt=Math.min(64,t-prev);prev=t;
+    if(!held){pos+=(target-pos)*(1-Math.exp(-dt/130));if(isVis()&&!belt.matches(':hover')){idle+=dt;if(idle>4800)go(1)}}
+    const L=N*stride,p=mod(pos,L);
+    track.style.transform=`translate3d(${belt.clientWidth/2-w/2-L-p}px,0,0)`;
+    all.forEach((s,i)=>{const d=Math.min(1,Math.abs(i*stride-L-p)/stride);s.style.transform=`scale(${1-d*.08})`;s.style.opacity=1-d*.3});
+    const i=mod(Math.round(p/stride),N);
+    if(i!==cur){cur=i;sec.style.setProperty('--stage-bg',orig[i].dataset.bg)}
+    requestAnimationFrame(loop);
+  })(prev);
+})();
+
+/* pilha infinita */
+(()=>{
+  const deck=$('#deck'),order=$$('.card',deck),N=order.length;
+  let busy=false,idle=0;
+  const place=()=>order.forEach((c,i)=>{c.classList.remove('free');c.classList.toggle('top',i===0);c.style.zIndex=N-i;const d=Math.min(i,3);c.style.transform=`translate(0,${d*18}px) scale(${1-d*.055}) rotate(${i?(i%2?2.2:-2.2):0}deg)`;c.style.opacity=i>3?0:1;c.setAttribute('aria-hidden',i?'true':'false')});
+  const next=(dir=1)=>{if(busy)return;busy=true;idle=0;const c=order[0];c.classList.remove('free');c.style.transform=`translate(${dir*115}%,-20px) rotate(${dir*16}deg)`;c.style.opacity=0;setTimeout(()=>{order.push(order.shift());place();busy=false},330)};
+  const back=()=>{if(busy)return;idle=0;order.unshift(order.pop());place()};
+  place();
+  let top;
+  drag(deck,{start(){top=order[0];top.classList.add('free')},move(dx){if(!busy)top.style.transform=`translate(${dx}px,${-Math.abs(dx)*.06}px) rotate(${dx*.05}deg)`},end(dx,v){idle=0;if(Math.abs(dx)>80||Math.abs(v)>.55)next(dx<0?-1:1);else place()}});
+  $$('[data-deck]').forEach(b=>b.addEventListener('click',()=>+b.dataset.deck>0?next(1):back()));
+  const isVis=visible(deck);
+  setInterval(()=>{if(!isVis()||deck.matches(':hover')||deck.classList.contains('drag'))return;idle+=500;if(idle>=5000)next(1)},500);
+})();
+
+/* cilindro 3D dos valores (valores repetidos para fechar o anel) */
+(()=>{
+  const data=[['Confiança','Relação construída com o tempo, com o que foi combinado sendo cumprido.'],['Transparência','Clareza sobre papéis, responsabilidades e quem executa cada serviço.'],['Honestidade','Dizer o que um plano pode fazer e também o que ele não pode prometer.'],['Ética','O interesse e o perfil da família orientam cada conversa.'],['Moral','Princípios que continuam iguais em tempos bons e em tempos de crise.']];
+  const tints=['var(--ink-800)','var(--brand-deep)','var(--ink-700)','var(--ink-600)','var(--ink-900)'];
+  const ring=$('#ring'),spin=$('#spin'),sec=$('#valores'),N=10,step=360/N;
+  const faces=Array.from({length:N},(_,i)=>{const [h,p]=data[i%5],el=document.createElement('article');el.className='face';if(i>=5)el.setAttribute('aria-hidden','true');
+    el.innerHTML=`<svg viewBox="0 0 100 100" fill="none" aria-hidden="true">${Array.from({length:(i%5)+1},(_,k)=>`<path stroke-width="4" d="M${8+k*8} ${24+k*5} L50 ${90-k*13} L${92-k*8} ${24+k*5}"/>`).join('')}</svg><h3>${h}</h3><p>${p}</p>`;spin.appendChild(el);return el});
+  let R,a=0,target=0,held=false,base=0,idle=0,cur=-1,prev=performance.now();
+  const size=()=>{const fw=innerWidth<640?200:250;ring.style.setProperty('--fw',fw+'px');R=Math.round((fw+26)/2/Math.tan(Math.PI/N));faces.forEach((f,i)=>f.style.transform=`rotateY(${i*step}deg) translateZ(${R}px)`)};
+  size();addEventListener('resize',size);
+  const go=d=>{target=(Math.round(target/step)+d)*step;idle=0};
+  $$('[data-ring]').forEach(b=>b.addEventListener('click',()=>go(+b.dataset.ring)));
+  ring.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(1);if(e.key==='ArrowLeft')go(-1)});
+  drag(ring,{start(){held=true;base=a},move(dx){a=target=base-dx*.28},end(dx,v){held=false;const f=Math.max(-step*2,Math.min(step*2,v*70));target=Math.round((a-f)/step)*step;idle=0}});
+  const isVis=visible(ring);
+  (function loop(t){
+    const dt=Math.min(64,t-prev);prev=t;
+    if(!held){a+=(target-a)*(1-Math.exp(-dt/150));if(isVis()&&!ring.matches(':hover')){idle+=dt;if(idle>3200)go(1)}}
+    spin.style.transform=`translateZ(${-R}px) rotateY(${-a}deg)`;
+    const i=mod(Math.round(a/step),N);
+    if(i!==cur){cur=i;faces.forEach((f,k)=>f.classList.toggle('front',k===i));sec.style.setProperty('--ring-bg',tints[i%5])}
+    requestAnimationFrame(loop);
+  })(prev);
+})();
+})();
+</script>
+<script type="module" src="terrain3d.js"></script>
+</body>
+</html>
